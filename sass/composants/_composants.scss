@@ -1,0 +1,39 @@
+@import "../utils/variables";
+
+#localisation {
+    background-color: $plainColorSecond;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+
+    div {
+        i {
+            position: relative;
+            left: -30%;
+            top: -70%;
+        }
+    }
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: $plainColorThird;
+
+    h1 {
+        text-align: center;
+        font-size: 150%;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    p {
+        text-align: center;
+    }
+}
