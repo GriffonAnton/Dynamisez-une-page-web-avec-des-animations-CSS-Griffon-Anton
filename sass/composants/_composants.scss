@@ -10,6 +10,7 @@
 
     form {
         input[type="text"] {
+
             background: transparent;
             border: none;
             text-align: center;
@@ -66,6 +67,7 @@
         border-radius: 12.5px;
         background-color: $flashyColorFirst;
         color: white;
+        font-weight: bold;
         display: flex;
         align-items: center;
         justify-content: center;
