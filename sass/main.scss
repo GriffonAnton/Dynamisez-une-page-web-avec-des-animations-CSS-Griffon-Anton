@@ -2,6 +2,12 @@
 @import "./utils/fonctions";
 @import "./utils/mixins";
 @import "./utils/placeholders";
+
 @import "./base/body";
-@import "./composants/composants";
+
+@import "./composants/etapes";
+@import "./composants/localisation";
+@import "./composants/menu";
+@import "./composants/restaurants";
+
 @import "./layout/layout";

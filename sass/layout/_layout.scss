@@ -19,15 +19,27 @@ header {
     background: linear-gradient(to bottom right, $flashyColorSecond, $flashyColorFirst);
     padding-left: 25px;
     padding-right: 25px;
+    border: none;
 
     p {
         color: white;
         font-weight: bold;
     }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+    }
 }
 
 .photo {
     overflow: hidden;
+
+    &--principale {
+        height: 200px;
+        width: 100%;
+    }
 
     img {
         object-fit: cover;
@@ -35,6 +47,88 @@ header {
         height: 100%;
     }
 }
+
+.retour {
+    position: relative;
+    width: 0;
+    height: 0;
+
+    i {
+        position: absolute;
+        left: 10px;
+        bottom: 210px;
+        padding: 5px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.titre {
+    background-color: $plainColorMain;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    font-size: 50%;
+    font-family: Shrikhand;
+    position: relative;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+
+        z-index: 100;
+
+        background-color: $plainColorMain;
+        opacity: 0;
+    }
+
+    i {
+        margin-top: 0;
+        font-size: 200%;
+    }
+}
+
+.menu_restaurant {
+    padding: 25px;
+    background-color: $plainColorMain;
+
+    &__soulignage {
+        display: flex;
+        height: 2px;
+        width: 25px;
+        background-color: $flashyColorThird;
+    }
+}
+
+.mets {
+    background-color: $flashyColorThird;
+    border-radius: 12.5px;
+    width: 96%;
+    margin: 2%;
+    height: 75px;
+
+    &__etiquette {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        border-radius: 12.5px;
+    }
+
+}
+
 
 footer {
     background-color: #353535;

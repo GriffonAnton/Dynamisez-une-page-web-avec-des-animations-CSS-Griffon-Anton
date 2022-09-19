@@ -1,0 +1,51 @@
+@import "../utils/variables";
+
+.etapes {
+    h2 {
+        margin-left: 5%;
+        font-size: 125%;
+    }
+
+    >div {
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 89%;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    &__nombre {
+        height: 25px;
+        width: 25px;
+        border-radius: 12.5px;
+        background-color: $flashyColorFirst;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+
+    &__contenu {
+        height: 100%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        background-color: $plainColorThird;
+        margin-left: -12.5px;
+        padding-left: 25px;
+        border-radius: 12.5px;
+        box-shadow: 0 5px 5px 5px #ececec;
+
+        i {
+            padding: 10px;
+        }
+
+        &:hover i {
+            color: $flashyColorFirst;
+        }
+    }
+}
