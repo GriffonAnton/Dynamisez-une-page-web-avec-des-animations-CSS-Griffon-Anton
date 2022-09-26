@@ -12,3 +12,20 @@ header {
         height: 20px;
     }
 }
+
+.retour {
+    position: relative;
+    width: 0;
+    height: 0;
+
+    i {
+        position: absolute;
+        bottom: -16px;
+        right: 150px;
+        padding: 5px;
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
