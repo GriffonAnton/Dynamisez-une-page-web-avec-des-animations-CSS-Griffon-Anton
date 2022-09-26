@@ -1,0 +1,35 @@
+@import "../utils/variables";
+
+.titre {
+    background-color: $plainColorThird;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    font-size: 50%;
+    font-family: Shrikhand;
+    position: relative;
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+
+        z-index: 100;
+
+        background-color: $plainColorThird;
+        opacity: 0;
+    }
+
+    i {
+        margin-top: 0;
+        font-size: 200%;
+    }
+}

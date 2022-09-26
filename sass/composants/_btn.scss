@@ -1,0 +1,28 @@
+@import "../utils/variables";
+
+.btn {
+    height: 50px;
+    border-radius: 25px;
+    background: linear-gradient(to bottom right, $flashyColorSecond, $flashyColorFirst);
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    box-shadow: 0 5px 5px 5px #ececec;
+
+    p {
+        color: white;
+        font-weight: bold;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background-color: $plainColorThird;
+    }
+
+    &:hover {
+        background: linear-gradient(to bottom right, lighten($flashyColorSecond, 15%), lighten($flashyColorFirst, 15%));
+        box-shadow: 0 5px 5px 5px darken(#ececec, 15%);
+    }
+}
