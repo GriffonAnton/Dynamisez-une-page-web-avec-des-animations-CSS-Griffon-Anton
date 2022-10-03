@@ -1,6 +1,18 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+@keyframes appearing {
+    0% {
+        opacity: 0;
+        top: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
 .menu_restaurant {
     padding: 25px;
     background-color: $plainColorThird;
@@ -18,6 +30,18 @@
         @include desktop-only {
             width: 33%;
         }
+
+        .mets:nth-of-type(3n+1) {
+            animation: appearing 2s ease-out 0s 1 normal forwards;
+        }
+
+        .mets:nth-of-type(3n+2) {
+            animation: appearing 2s ease-out 1s 1 normal forwards;
+        }
+
+        .mets:nth-of-type(3n+3) {
+            animation: appearing 2s ease-out 2s 1 normal forwards;
+        }
     }
 
     &__soulignage {
@@ -26,67 +50,74 @@
         width: 25px;
         background-color: $flashyColorThird;
     }
+
+
 }
 
 .mets {
-    background-color: $flashyColorThird;
+    background-color: white;
     border-radius: 12.5px;
     margin: 5px;
     display: flex;
     height: 100px;
     overflow: hidden;
+    position: relative;
+    opacity: 0;
+    top: 50px;
 
-    &__etiquette {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        background-color: white;
-        border-radius: 12.5px;
-    }
 
     &__texte {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+
         padding-left: 12.5px;
-        text-overflow: ellipsis;
+
+        width: 80%;
+        transition: all 2000ms;
+
+        h3,
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
     }
 
     &__prix {
         display: flex;
         align-items: flex-end;
         padding-right: 12.5px;
+        width: 20%;
     }
 
-    &__selection {
-        width: 50px;
-        transform: scaleX(0);
-        transition-property: transform;
-        transition-duration: 400ms;
+    &__check {
+        color: white;
+        background-color: $flashyColorThird;
+        width: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-left: 50px;
+        transform: rotate(0);
+        transition: all 2000ms;
+        /*transition-property: transform;
+        transition-duration: 400ms;*/
+    }
+
+    &:hover & {
+        &__texte {
+            width: 60%;
+            transition: all 2000ms;
+            white-space: nowrap;
+        }
 
         &__check {
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transform: rotate(0);
-            transition-property: transform;
-            transition-duration: 400ms;
+            width: 20%;
+            transition: all 2000ms;
+
+            i {
+                transition: all 2000ms;
+                transform: rotate(1turn);
+            }
         }
-    }
 
-    &:hover &__selection {
-        transform: scaleX(1);
-    }
-
-    &:hover &__selection__check {
-        transform: rotate(1turn);
     }
 
 

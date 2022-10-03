@@ -1,0 +1,33 @@
+@import "../utils/variables";
+
+@keyframes disappear {
+    0% {
+        height: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+.loader {
+    background-color: $plainColorThird;
+    position: fixed;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 200%;
+    overflow: hidden;
+    animation: disappear 2s ease-out 3s 1 normal forwards;
+
+    i {
+        background: -webkit-linear-gradient($flashyColorFirst, $flashyColorSecond);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

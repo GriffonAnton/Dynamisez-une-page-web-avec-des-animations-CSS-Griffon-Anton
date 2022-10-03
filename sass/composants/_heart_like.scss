@@ -1,0 +1,46 @@
+@import "../utils/variables";
+
+$sizeHeartLike : 32px;
+
+.heart_like {
+    height: $sizeHeartLike;
+    width: $sizeHeartLike;
+    padding: 12.5px;
+
+    &__empty {
+        overflow: hidden;
+        height: $sizeHeartLike;
+        font-size: $sizeHeartLike;
+        position: absolute;
+        transition: all 2000ms;
+        background-color: white;
+    }
+
+    &__full i {
+        height: $sizeHeartLike;
+        font-size: $sizeHeartLike;
+        overflow: hidden;
+        background: -webkit-linear-gradient($flashyColorFirst, $flashyColorSecond);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &:hover &__empty {
+        height: 0px;
+        transition: all 2000ms;
+        animation-fill-mode: forwards;
+    }
+
+    &--restaurant & {
+        z-index: 200;
+
+        &__empty i {
+            font-weight: normal;
+            font-size: 100%;
+        }
+
+        &__empty {
+            background-color: $plainColorThird;
+        }
+    }
+}
