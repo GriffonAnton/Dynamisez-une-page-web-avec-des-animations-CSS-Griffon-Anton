@@ -56,13 +56,14 @@
         padding-left: 25px;
         border-radius: 12.5px;
         box-shadow: 0 5px 5px 5px #ececec;
+        font-weight: bold;
 
         i {
             padding: 10px;
         }
 
         &:hover {
-            background-color: lighten($flashyColorSecond, 22.5%);
+            background-color: $plainColorFourth;
         }
 
         &:hover i {
